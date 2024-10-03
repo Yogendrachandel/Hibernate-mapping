@@ -25,7 +25,7 @@ public class Blog implements Serializable {
 
 
     @ManyToOne(cascade = CascadeType.ALL)//Many Blog belongs to one Owner
-    @JoinColumn(name = "fk_owner_id")//Create forignkey in Blog table
+    @JoinColumn(name = "fk_owner_id")//Create forignkey in Blog table, even if comment thi line ,hiberante will create foreign key column with there own name like OWNER_ID
     @JsonBackReference
     @ToString.Exclude//creating problem while bidirection mapping
     private Owner owner;
